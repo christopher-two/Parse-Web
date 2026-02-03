@@ -1,11 +1,617 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import {
+  BookOpen,
+  Rocket,
+  Shield,
+  Menu,
+  X,
+  Smartphone,
+  Download,
+  ArrowRight,
+  Zap,
+  Droplet,
+  Eye,
+  Lock,
+  Github,
+  Twitter,
+} from "lucide-astro";
+import "../styles/global.css";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/Parse_Oprimized.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Parse - La lectura en Android, perfeccionada</title>
+    <meta
+      name="description"
+      content="Lector de libros y PDFs para Android enfocado en privacidad, minimalismo y rendimiento."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-white text-zinc-600 font-['Poppins',sans-serif] antialiased overflow-x-hidden selection:bg-purple-100 selection:text-purple-700"
+  >
+    <!-- Background Grid -->
+    <div class="fixed inset-0 z-0 pointer-events-none">
+      <div
+        class="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] bg-[size:24px_24px]"
+      >
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="fixed top-0 w-full z-50 border-b border-zinc-200 bg-white/70 backdrop-blur-xl transition-transform duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-center">
+        <a href="#" class="flex items-center gap-1 group">
+          <div
+            class="w-10 h-10 flex items-center justify-center text-black group-hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="/Parse_Oprimized.svg"
+              alt="Parse Logo"
+              class="w-10 h-10"
+            />
+          </div>
+          <span
+            class="font-bold text-3xl text-zinc-900 tracking-tighter -ml-1 mt-3 font-['Sixtyfour']"
+            >arse</span
+          >
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="relative z-10 pt-32 pb-20">
+      <!-- Hero Section -->
+      <section class="max-w-7xl mx-auto px-6 text-center mb-32">
+        <div
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-50 border border-zinc-100 text-zinc-500 text-xs font-semibold uppercase tracking-wide mb-8 animate-fade-in-up"
+        >
+          <span class="relative flex h-2 w-2">
+            <span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"
+            ></span>
+            <span
+              class="relative inline-flex rounded-full h-2 w-2 bg-purple-500"
+            ></span>
+          </span>
+          v1.0 Beta Disponible
+        </div>
+
+        <h1
+          class="text-5xl md:text-7xl font-extrabold text-zinc-900 tracking-tight mb-6 leading-tight max-w-4xl mx-auto animate-fade-in-up delay-100 font-['Sixtyfour']"
+        >
+          La lectura en Android, <br class="hidden md:block" />
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-400"
+            >perfeccionada.</span
+          >
+        </h1>
+
+        <p
+          class="text-lg md:text-xl text-zinc-500 max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up delay-200"
+        >
+          Parse es un lector moderno diseñado para la concentración. Sin
+          distracciones, totalmente privado y con un diseño que respeta tu
+          contenido.
+        </p>
+
+        <!-- Phone Cluster -->
+        <div
+          id="phone-cluster"
+          class="relative h-[450px] md:h-[600px] w-full mt-20 collapsed transition-transform duration-1000"
+        >
+          <!-- Left Phone (Library) -->
+          <div
+            class="phone-anim hidden md:block absolute left-1/2 top-1/2 w-[280px] h-[550px] bg-zinc-900 rounded-[2.5rem] border-[8px] border-zinc-800 z-0 origin-bottom-right transition-all duration-1000 ease-out hover:z-20 group shadow-none"
+            style="transform: translate(calc(-50% - 220px), -50%) rotateY(12deg) scale(0.9);"
+          >
+            <div
+              class="w-full h-full rounded-[2rem] overflow-hidden bg-white relative"
+            >
+              <!-- Status Bar -->
+              <div class="h-6 w-full flex justify-between px-6 py-2">
+                <span class="text-[10px] font-medium text-zinc-400">9:41</span>
+                <div class="flex gap-1.5">
+                  <div class="w-3 h-3 rounded-full bg-zinc-200"></div>
+                </div>
+              </div>
+              <!-- Library UI -->
+              <div class="p-6">
+                <div class="text-2xl font-semibold text-zinc-900 mb-6">
+                  Biblioteca
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                  {
+                    [1, 2, 3, 4].map((i) => (
+                      <div class="aspect-[2/3] bg-zinc-100 rounded-lg animate-pulse-slow object-cover border border-zinc-200/50" />
+                    ))
+                  }
+                </div>
+              </div>
+              <!-- Bottom Nav -->
+              <div
+                class="absolute bottom-0 w-full h-16 bg-white/90 backdrop-blur border-t border-zinc-100 flex items-center justify-around text-zinc-400"
+              >
+                <div class="text-purple-600"><BookOpen size={20} /></div>
+                <div><Zap size={20} /></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Phone (Settings) -->
+          <div
+            class="phone-anim hidden md:block absolute left-1/2 top-1/2 w-[280px] h-[550px] bg-zinc-900 rounded-[2.5rem] border-[8px] border-zinc-800 z-0 origin-bottom-left transition-all duration-1000 ease-out hover:z-20 shadow-none"
+            style="transform: translate(calc(-50% + 220px), -50%) rotateY(-12deg) scale(0.9);"
+          >
+            <div class="w-full h-full rounded-[2rem] overflow-hidden bg-white">
+              <!-- Settings UI -->
+              <div class="p-6">
+                <div class="h-6 mb-6"></div>
+                <div class="text-2xl font-semibold text-zinc-900 mb-8">
+                  Ajustes
+                </div>
+                <div class="space-y-6">
+                  <div
+                    class="flex items-center justify-between p-3 bg-zinc-50 border border-zinc-100 rounded-xl"
+                  >
+                    <span class="text-sm font-medium text-zinc-700"
+                      >Tema Claro</span
+                    >
+                    <div class="w-10 h-6 bg-purple-500 rounded-full relative">
+                      <div
+                        class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full"
+                      >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="space-y-3">
+                    <div
+                      class="h-10 bg-zinc-50 rounded-lg w-full border border-zinc-100"
+                    >
+                    </div>
+                    <div
+                      class="h-10 bg-zinc-50 rounded-lg w-full border border-zinc-100"
+                    >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Center Phone (Reader) -->
+          <div
+            class="absolute left-1/2 top-1/2 w-[240px] md:w-[300px] h-[480px] md:h-[600px] bg-zinc-900 rounded-[2.5rem] md:rounded-[3rem] border-[6px] md:border-[8px] border-zinc-800 z-10 transition-transform duration-500 hover:scale-105 shadow-none"
+            style="transform: translate(-50%, -50%);"
+          >
+            <!-- Screen Content -->
+            <div
+              class="w-full h-full rounded-[2.5rem] bg-[#FAFAFA] overflow-hidden relative flex flex-col"
+            >
+              <!-- Notch -->
+              <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-7 bg-zinc-900 rounded-b-2xl z-20"
+              >
+              </div>
+
+              <!-- Reader Header -->
+              <div
+                class="h-20 w-full flex items-end justify-between px-6 pb-4 bg-white/50 z-10"
+              >
+                <div
+                  class="w-8 h-8 rounded-full bg-white/50 flex items-center justify-center backdrop-blur text-zinc-800"
+                >
+                  <ArrowRight size={14} class="rotate-180" />
+                </div>
+                <div
+                  class="w-8 h-8 rounded-full bg-white/50 flex items-center justify-center backdrop-blur text-zinc-800"
+                >
+                  <Zap size={14} />
+                </div>
+              </div>
+
+              <!-- Text Content -->
+              <div class="flex-1 px-6 py-4 overflow-hidden relative">
+                <h3
+                  class="font-serif text-2xl text-zinc-900 mb-4 leading-snug font-['Sixtyfour']"
+                >
+                  El Arte de la Simplicidad
+                </h3>
+                <p
+                  class="font-serif text-lg text-zinc-600 leading-relaxed mb-4"
+                >
+                  El minimalismo no es la ausencia de algo, sino la cantidad
+                  perfecta de algo. En el diseño de interfaces, cada píxel debe
+                  tener un propósito.
+                </p>
+                <p class="font-serif text-lg text-zinc-600 leading-relaxed">
+                  Parse elimina el ruido para que solo quede la señal: tus
+                  palabras.
+                </p>
+
+                <!-- Page Number -->
+                <div
+                  class="absolute bottom-6 left-0 w-full text-center text-[10px] text-zinc-400 font-medium tracking-widest uppercase"
+                >
+                  Página 14 de 243
+                  <div
+                    class="h-1 w-24 bg-zinc-100 rounded-full mx-auto mt-2 overflow-hidden"
+                  >
+                    <div class="h-full w-1/6 bg-purple-500 rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-left"
+    >
+    </div>
+  </body>
+
+  <!-- Features Section (Parallax) -->
+  <div id="features" class="relative">
+    <section
+      class="sticky top-0 h-screen flex items-center justify-center bg-zinc-50 border-t border-zinc-200 overflow-hidden"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <div class="order-2 md:order-1 relative">
+          <!-- Background Icon -->
+          <div
+            class="absolute -left-32 md:-left-64 top-1/2 -translate-y-1/2 text-purple-600/10 pointer-events-none -z-10"
+          >
+            <Zap size={300} class="md:hidden" stroke-width={1} />
+            <Zap size={600} class="hidden md:block" stroke-width={1} />
+          </div>
+
+          <h3 class="text-4xl font-bold text-zinc-900 mb-6 font-['Sixtyfour']">
+            Velocidad Instantánea
+          </h3>
+          <p class="text-xl text-zinc-600 leading-relaxed">
+            Parse está optimizado para abrir libros en milisegundos. Sin tiempos
+            de carga, sin esperas. Tu biblioteca está lista al instante.
+          </p>
+        </div>
+        <div class="order-1 md:order-2 flex justify-center">
+          <div
+            class="w-full max-w-sm aspect-square bg-white rounded-3xl border border-zinc-100 p-8 flex items-center justify-center"
+          >
+            <div class="text-center">
+              <div class="text-6xl font-black text-zinc-900 mb-2">0.2s</div>
+              <div class="text-sm text-zinc-400 uppercase tracking-widest">
+                Tiempo de Carga
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="sticky top-0 h-screen flex items-center justify-center bg-white border-t border-zinc-200 overflow-hidden"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <div class="order-2 md:order-1 relative">
+          <!-- Background Icon -->
+          <div
+            class="absolute -left-32 md:-left-64 top-1/2 -translate-y-1/2 text-blue-600/10 pointer-events-none -z-10"
+          >
+            <BookOpen size={300} class="md:hidden" stroke-width={1} />
+            <BookOpen size={600} class="hidden md:block" stroke-width={1} />
+          </div>
+
+          <h3 class="text-4xl font-bold text-zinc-900 mb-6 font-['Sixtyfour']">
+            Renderizado Perfecto
+          </h3>
+          <p class="text-xl text-zinc-600 leading-relaxed">
+            Tipografía ajustada manualmente, márgenes precisos y un motor de
+            renderizado que respeta el diseño original de cada libro.
+          </p>
+        </div>
+        <div class="order-1 md:order-2 flex justify-center">
+          <div
+            class="relative w-full max-w-sm aspect-[3/4] bg-zinc-50 rounded-xl border border-zinc-200 p-8 rotate-3 transition-transform hover:rotate-0"
+          >
+            <div class="h-4 w-2/3 bg-zinc-200 mb-6 rounded"></div>
+            <div class="space-y-3">
+              <div class="h-2 w-full bg-zinc-200 rounded"></div>
+              <div class="h-2 w-full bg-zinc-200 rounded"></div>
+              <div class="h-2 w-5/6 bg-zinc-200 rounded"></div>
+              <div class="h-2 w-full bg-zinc-200 rounded"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="sticky top-0 h-screen flex items-center justify-center bg-zinc-900 text-white border-t border-zinc-800 overflow-hidden"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <div class="order-2 md:order-1 relative">
+          <!-- Background Icon -->
+          <div
+            class="absolute -left-32 md:-left-64 top-1/2 -translate-y-1/2 text-white/5 pointer-events-none -z-10"
+          >
+            <Shield size={300} class="md:hidden" stroke-width={1} />
+            <Shield size={600} class="hidden md:block" stroke-width={1} />
+          </div>
+
+          <h3 class="text-4xl font-bold text-white mb-6 font-['Sixtyfour']">
+            Privacidad Total
+          </h3>
+          <p class="text-xl text-zinc-400 leading-relaxed">
+            Tus libros son tuyos. Parse funciona 100% offline y no recopila
+            datos de lectura. Sin cuentas, sin nube, sin rastreo.
+          </p>
+        </div>
+        <div class="order-1 md:order-2 flex justify-center">
+          <div
+            class="w-64 h-64 bg-zinc-800 rounded-full flex items-center justify-center border border-zinc-700"
+          >
+            <Lock size={64} class="text-zinc-500" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Impact Section -->
+  <section
+    class="h-screen flex items-center justify-center relative overflow-hidden bg-white"
+  >
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+      <h2
+        class="text-4xl md:text-7xl font-bold tracking-tight text-zinc-900 mb-8 font-['Sixtyfour']"
+      >
+        Reinventamos <br />
+        <span class="text-purple-600">la forma de leer.</span>
+      </h2>
+      <p
+        class="text-zinc-500 text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed"
+      >
+        Diseñado para quienes aman las historias, pero exigen la mejor
+        tecnología. Minimalismo radical, potencia absoluta.
+      </p>
+      <div class="mt-12 flex justify-center gap-4">
+        <a
+          href="#"
+          class="px-8 py-4 bg-zinc-900 text-white font-bold rounded-full hover:bg-zinc-800 transition-colors"
+        >
+          Prueba la beta
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (Floating Card) -->
+  <!-- Footer -->
+  <footer class="bg-white border-t border-zinc-200 pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
+        <div class="col-span-2 md:col-span-1">
+          <div class="flex items-center gap-1 mb-6">
+            <div class="w-6 h-6 flex items-center justify-center text-black">
+              <img
+                src="/Parse_Oprimized.svg"
+                alt="Parse Logo"
+                class="w-6 h-6"
+              />
+            </div>
+            <span
+              class="font-bold text-xl text-zinc-900 tracking-tighter -ml-0.5 mt-1.5 font-['Sixtyfour']"
+              >arse</span
+            >
+          </div>
+          <p class="text-zinc-500 text-sm">
+            Construido con amor por la lectura. <br />
+            Designed for Android.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-zinc-900 mb-6 font-['Sixtyfour']">
+            Producto
+          </h4>
+          <ul class="space-y-4 text-sm text-zinc-500">
+            <li>
+              <a href="#" class="hover:text-purple-600 transition-colors"
+                >Descargar</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-purple-600 transition-colors"
+                >Changelog</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-purple-600 transition-colors"
+                >Roadmap</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-zinc-900 mb-6 font-['Sixtyfour']">
+            Comunidad
+          </h4>
+          <ul class="space-y-4 text-sm text-zinc-500">
+            <li>
+              <a href="#" class="hover:text-purple-600 transition-colors"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-purple-600 transition-colors"
+                >Discord</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-purple-600 transition-colors"
+                >Twitter</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-zinc-900 mb-6 font-['Sixtyfour']">Legal</h4>
+          <ul class="space-y-4 text-sm text-zinc-500">
+            <li>
+              <a href="#" class="hover:text-purple-600 transition-colors"
+                >Privacidad</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-purple-600 transition-colors"
+                >Términos</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col md:flex-row justify-between items-center border-t border-zinc-200 pt-8 text-xs text-zinc-500"
+      >
+        <p>&copy; 2026. Desarrollado por Override y ChristopherTwo.</p>
+        <p class="mt-2 md:mt-0">Design inspired by modern Swiss Style.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button
+    id="backToTop"
+    class="fixed bottom-8 right-8 bg-zinc-900 text-white p-4 rounded-full opacity-0 translate-y-10 transition-all duration-300 hover:bg-black hover:scale-110 z-50 pointer-events-none"
+    aria-label="Volver arriba"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="m18 15-6-6-6 6"></path>
+    </svg>
+  </button>
+</html>
+
+<script>
+  let lastScrollY = window.scrollY;
+  const navbar = document.getElementById("navbar");
+  const backToTopBtn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+
+    // Navbar Logic (Hide on Scroll Down, Show on Scroll Up)
+    if (navbar) {
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        navbar.style.transform = "translateY(-100%)";
+      } else {
+        navbar.style.transform = "translateY(0)";
+      }
+    }
+    lastScrollY = currentScrollY;
+
+    // Back to Top Button Logic
+    if (backToTopBtn) {
+      if (currentScrollY > 500) {
+        backToTopBtn.classList.remove(
+          "opacity-0",
+          "translate-y-10",
+          "pointer-events-none",
+        );
+      } else {
+        backToTopBtn.classList.add(
+          "opacity-0",
+          "translate-y-10",
+          "pointer-events-none",
+        );
+      }
+    }
+  });
+
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  // Phone Animation Logic
+  const phoneCluster = document.getElementById("phone-cluster");
+  if (phoneCluster) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            phoneCluster.classList.remove("collapsed");
+          }
+        });
+      },
+      { threshold: 0.4 }, // Trigger when 40% visible
+    );
+    observer.observe(phoneCluster);
+  }
+</script>
+
+<style is:global>
+  /* Perspective for 3D Transforms */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .rotate-y-12 {
+    transform: rotateY(12deg);
+  }
+  .-rotate-y-12 {
+    transform: rotateY(-12deg);
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  /* Phone Animation Styles (Desktop Only) */
+  /* Phone Animation Styles (Desktop Only) */
+  @media (min-width: 768px) {
+    #phone-cluster.collapsed .phone-anim {
+      transform: translate(-50%, -50%) scale(0.9) rotateY(0deg) !important;
+      left: 50% !important;
+      top: 50% !important;
+      right: auto !important;
+    }
+  }
+</style>
