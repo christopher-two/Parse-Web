@@ -1,46 +1,56 @@
-# Astro Starter Kit: Basics
+# Parse - La lectura en Android, perfeccionada
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+Parse es la landing page oficial de **Parse**, un lector de libros y PDFs moderno para Android diseñado para la concentración radical, el minimalismo y el rendimiento absoluto.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Parse Preview](public/Parse_Oprimized.svg)
 
-## 🚀 Project Structure
+## ✨ Características de la Landing
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Diseño Suizo Moderno**: Minimalismo radical con una paleta monocromática y tipografía audaz.
+- **Phone Cluster animado**: Una exhibición visual de la interfaz de la aplicación con animaciones de entrada y hover.
+- **Scroll Parallax**: Secciones de características dinámicas que fluyen suavemente al navegar.
+- **Tipografía Premium**: Uso de "Sixtyfour" para títulos de impacto y "Poppins" para una legibilidad perfecta.
+- **Totalmente Responsive**: Optimizado para dispositivos móviles, tablets y escritorio.
+- **Rendimiento Extremo**: Construido con Astro 5 para cargas instantáneas.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## 🛠️ Tecnologías
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+- **Astro 5**: Framework web centrado en el contenido.
+- **Tailwind CSS**: Estilizado moderno y utilitario.
+- **Lucide Astro**: Iconografía vectorial limpia.
+- **Google Fonts**: Integración de Poppins y Sixtyfour.
 
-## 🧞 Commands
+## 🚀 Inicio Rápido
 
-All commands are run from the root of the project, from a terminal:
+### Requisitos previos
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+- [Node.js](https://nodejs.org/) (v18.x o superior)
+- [pnpm](https://pnpm.io/)
 
-## 👀 Want to learn more?
+### Instalación
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+1. Clona el repositorio:
+   ```sh
+   git clone https://github.com/christopher-two/Parse-Web.git
+   ```
+2. Instala las dependencias:
+   ```sh
+   pnpm install
+   ```
+3. Inicia el servidor de desarrollo:
+   ```sh
+   pnpm dev
+   ```
+
+## 📦 Comandos Disponibles
+
+| Comando            | Acción                                        |
+| :----------------- | :-------------------------------------------- |
+| `pnpm dev`         | Inicia el servidor local en `localhost:4321`  |
+| `pnpm build`       | Compila el sitio para producción en `./dist/` |
+| `pnpm preview`     | Previsualiza la compilación localmente        |
+| `pnpm astro check` | Ejecuta chequeos de diagnóstico en el código  |
+
+---
+
+Desarrollado con ❤️ por el equipo de **Parse**.
