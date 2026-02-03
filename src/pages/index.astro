@@ -122,7 +122,7 @@ import "../styles/global.css";
           <!-- Left Phone (Library) -->
           <div
             class="phone-anim absolute left-1/2 top-1/2 w-[190px] md:w-[280px] h-[380px] md:h-[550px] bg-zinc-900 rounded-[2rem] md:rounded-[2.5rem] border-[6px] md:border-[8px] border-zinc-800 z-0 origin-bottom-right transition-all duration-1000 ease-out hover:z-20 group shadow-none"
-            style="transform: translate(calc(-50% - 60px), -50%) rotateY(12deg) scale(0.85);"
+            style="transform: translate(calc(-50% - 100px), -50%) rotateY(12deg) scale(0.85);"
           >
             <div
               class="w-full h-full rounded-[2rem] overflow-hidden bg-white relative"
@@ -160,7 +160,7 @@ import "../styles/global.css";
           <!-- Right Phone (Settings) -->
           <div
             class="phone-anim absolute left-1/2 top-1/2 w-[190px] md:w-[280px] h-[380px] md:h-[550px] bg-zinc-900 rounded-[2rem] md:rounded-[2.5rem] border-[6px] md:border-[8px] border-zinc-800 z-0 origin-bottom-left transition-all duration-1000 ease-out hover:z-20 shadow-none"
-            style="transform: translate(calc(-50% + 60px), -50%) rotateY(-12deg) scale(0.85);"
+            style="transform: translate(calc(-50% + 100px), -50%) rotateY(-12deg) scale(0.85);"
           >
             <div class="w-full h-full rounded-[2rem] overflow-hidden bg-white">
               <!-- Settings UI -->
@@ -616,10 +616,14 @@ import "../styles/global.css";
     transform-style: preserve-3d;
   }
 
-  /* Phone Animation Styles (Desktop Only) */
   /* Phone Animation Styles */
+  #phone-cluster.collapsed .phone-anim:nth-of-type(1) {
+    transform: translate(calc(-50% - 20px), -50%) scale(0.8) rotateY(0deg) !important;
+  }
+  #phone-cluster.collapsed .phone-anim:nth-of-type(2) {
+    transform: translate(calc(-50% + 20px), -50%) scale(0.8) rotateY(0deg) !important;
+  }
   #phone-cluster.collapsed .phone-anim {
-    transform: translate(-50%, -50%) scale(0.8) rotateY(0deg) !important;
     left: 50% !important;
     top: 50% !important;
     right: auto !important;
