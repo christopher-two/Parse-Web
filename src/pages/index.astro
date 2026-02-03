@@ -16,30 +16,35 @@ import {
   Twitter,
 } from "lucide-astro";
 import "../styles/global.css";
+import SEO from "../components/SEO.astro";
+
+const appSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Parse",
+  operatingSystem: "Android",
+  applicationCategory: "BooksReferenceApplication",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  description:
+    "Lector de libros y PDFs para Android enfocado en privacidad, minimalismo y rendimiento.",
+  featureList:
+    "Lectura rápida, privacidad total, diseño minimalista, sin distracciones",
+  screenshot: "https://parse.christopher.com.mx/og-image.png",
+};
 ---
 
 <!doctype html>
 <html lang="es" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/Parse_Oprimized.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Parse - La lectura en Android, perfeccionada</title>
-    <meta
-      name="description"
-      content="Lector de libros y PDFs para Android enfocado en privacidad, minimalismo y rendimiento."
+    <SEO
+      title="Parse - La lectura en Android, perfeccionada"
+      description="Descubre Parse, el lector de libros y PDFs para Android diseñado para la concentración radical. Privado, rápido y minimalista."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap"
-      rel="stylesheet"
-    />
+    <script type="application/ld+json" set:html={JSON.stringify(appSchema)} />
   </head>
   <body
     class="bg-white text-zinc-600 font-['Poppins',sans-serif] antialiased overflow-x-hidden selection:bg-purple-100 selection:text-purple-700"
@@ -274,9 +279,7 @@ import "../styles/global.css";
       class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-left"
     >
     </div>
-  </body>
-
-  <!-- Features Section (Parallax) -->
+  </body><!-- Features Section (Parallax) -->
   <div id="features" class="relative">
     <section
       class="relative md:sticky top-0 min-h-[80vh] md:h-screen flex items-center justify-center bg-zinc-50 border-t border-zinc-200 overflow-hidden py-16 md:py-0"
