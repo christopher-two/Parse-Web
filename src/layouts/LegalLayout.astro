@@ -1,0 +1,103 @@
+---
+import { ArrowLeft } from "lucide-astro";
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/Parse_Oprimized.svg" />
+    <title>{title} - Parse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-white text-zinc-600 font-['Poppins',sans-serif] antialiased min-h-screen"
+  >
+    <!-- Background Grid -->
+    <div class="fixed inset-0 z-0 pointer-events-none">
+      <div
+        class="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] bg-[size:24px_24px]"
+      >
+      </div>
+    </div>
+
+    <nav
+      class="fixed top-0 w-full z-50 border-b border-zinc-200 bg-white/70 backdrop-blur-xl"
+    >
+      <div
+        class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between"
+      >
+        <a
+          href="/"
+          class="flex items-center gap-2 text-zinc-900 font-medium hover:text-purple-600 transition-colors"
+        >
+          <ArrowLeft size={18} />
+          <span>Volver al inicio</span>
+        </a>
+      </div>
+    </nav>
+
+    <main class="relative z-10 pt-32 pb-20 px-6">
+      <div
+        class="max-w-3xl mx-auto prose prose-zinc prose-headings:font-['Sixtyfour'] prose-headings:text-zinc-900 prose-h1:text-3xl md:prose-h1:text-4xl prose-h2:text-xl md:prose-h2:text-2xl prose-h2:mt-12 prose-p:leading-relaxed prose-li:leading-relaxed selection:bg-purple-100 selection:text-purple-700"
+      >
+        <slot />
+      </div>
+    </main>
+
+    <footer class="relative z-10 border-t border-zinc-100 py-10 bg-zinc-50/50">
+      <div class="max-w-3xl mx-auto px-6 text-center text-xs text-zinc-400">
+        <p>&copy; 2026 Parse. La privacidad es un derecho.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  /* Basic typography overrides for MD content */
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.05em;
+    font-family: "Sixtyfour", sans-serif;
+  }
+
+  .prose h1 {
+    color: #18181b; /* zinc-900 */
+    margin-bottom: 2rem;
+  }
+
+  .prose h2 {
+    color: #18181b;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose p {
+    margin-bottom: 1.5rem;
+  }
+
+  .prose hr {
+    border: 0;
+    border-top: 1px solid #e4e4e7;
+    margin: 3rem 0;
+  }
+</style>
