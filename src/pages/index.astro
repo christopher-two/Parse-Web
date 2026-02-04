@@ -451,186 +451,194 @@ const appSchema = {
           </p>
         </div>
 
-        Producto
+        <div>
+          <h4 class="font-bold text-zinc-900 mb-6 font-['Sixtyfour']">
+            Producto
+          </h4>
+          <ul class="space-y-4 text-sm text-zinc-500">
+            <li>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.christopher.parse"
+                class="hover:text-purple-600 transition-colors">Descargar</a
+              >
+            </li>
+            <li>
+              <a href="/roadmap" class="hover:text-purple-600 transition-colors"
+                >Roadmap</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-zinc-900 mb-6 font-['Sixtyfour']">
+            Comunidad
+          </h4>
+          <ul class="space-y-4 text-sm text-zinc-500">
+            <li>
+              <a
+                href="https://github.com/christopher-two"
+                target="_blank"
+                class="hover:text-purple-600 transition-colors">GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://instagram.com/overridellc"
+                target="_blank"
+                class="hover:text-purple-600 transition-colors">Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-zinc-900 mb-6 font-['Sixtyfour']">Legal</h4>
+          <ul class="space-y-4 text-sm text-zinc-500">
+            <li>
+              <a href="/privacy" class="hover:text-purple-600 transition-colors"
+                >Privacidad</a
+              >
+            </li>
+            <li>
+              <a href="/terms" class="hover:text-purple-600 transition-colors"
+                >Términos</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row justify-between items-center border-t border-zinc-200 pt-8 text-xs text-zinc-500"
+        >
+          <p>&copy; 2026. Desarrollado por Override y ChristopherTwo.</p>
+          <p class="mt-2 md:mt-0">Design inspired by modern Swiss Style.</p>
+        </div>
       </div>
-      <ul class="space-y-4 text-sm text-zinc-500">
-        <li>
-          <a
-            href="https://play.google.com/store/apps/details?id=com.christopher.parse"
-            class="hover:text-purple-600 transition-colors">Descargar</a
-          >
-        </li>
-        <li>
-          <a href="/roadmap" class="hover:text-purple-600 transition-colors"
-            >Roadmap</a
-          >
-        </li>
-      </ul>
+
+      <!-- Back to Top Button -->
+      <button
+        id="backToTop"
+        class="fixed bottom-8 right-8 bg-zinc-900 text-white p-4 rounded-full opacity-0 translate-y-10 transition-all duration-300 hover:bg-black hover:scale-110 z-50 pointer-events-none"
+        aria-label="Volver arriba"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m18 15-6-6-6 6"></path>
+        </svg>
+      </button>
     </div>
 
-    <div>
-      <h4 class="font-bold text-zinc-900 mb-6 font-['Sixtyfour']">Comunidad</h4>
-      <ul class="space-y-4 text-sm text-zinc-500">
-        <li>
-          <a
-            href="https://github.com/christopher-two"
-            target="_blank"
-            class="hover:text-purple-600 transition-colors">GitHub</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://instagram.com/overridellc"
-            target="_blank"
-            class="hover:text-purple-600 transition-colors">Instagram</a
-          >
-        </li>
-      </ul>
-    </div>
+    <script>
+      let lastScrollY = window.scrollY;
+      const navbar = document.getElementById("navbar");
+      const backToTopBtn = document.getElementById("backToTop");
 
-    <div>
-      <h4 class="font-bold text-zinc-900 mb-6 font-['Sixtyfour']">Legal</h4>
-      <ul class="space-y-4 text-sm text-zinc-500">
-        <li>
-          <a href="/privacy" class="hover:text-purple-600 transition-colors"
-            >Privacidad</a
-          >
-        </li>
-        <li>
-          <a href="/terms" class="hover:text-purple-600 transition-colors"
-            >Términos</a
-          >
-        </li>
-      </ul>
-    </div>
+      window.addEventListener("scroll", () => {
+        const currentScrollY = window.scrollY;
 
-    <div
-      class="flex flex-col md:flex-row justify-between items-center border-t border-zinc-200 pt-8 text-xs text-zinc-500"
-    >
-      <p>&copy; 2026. Desarrollado por Override y ChristopherTwo.</p>
-      <p class="mt-2 md:mt-0">Design inspired by modern Swiss Style.</p>
-    </div>
-  </footer>
-
-  <!-- Back to Top Button -->
-  <button
-    id="backToTop"
-    class="fixed bottom-8 right-8 bg-zinc-900 text-white p-4 rounded-full opacity-0 translate-y-10 transition-all duration-300 hover:bg-black hover:scale-110 z-50 pointer-events-none"
-    aria-label="Volver arriba"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <path d="m18 15-6-6-6 6"></path>
-    </svg>
-  </button>
-</html>
-
-<script>
-  let lastScrollY = window.scrollY;
-  const navbar = document.getElementById("navbar");
-  const backToTopBtn = document.getElementById("backToTop");
-
-  window.addEventListener("scroll", () => {
-    const currentScrollY = window.scrollY;
-
-    // Navbar Logic (Hide on Scroll Down, Show on Scroll Up)
-    if (navbar) {
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        navbar.style.transform = "translateY(-100%)";
-      } else {
-        navbar.style.transform = "translateY(0)";
-      }
-    }
-    lastScrollY = currentScrollY;
-
-    // Back to Top Button Logic
-    if (backToTopBtn) {
-      if (currentScrollY > 500) {
-        backToTopBtn.classList.remove(
-          "opacity-0",
-          "translate-y-10",
-          "pointer-events-none",
-        );
-      } else {
-        backToTopBtn.classList.add(
-          "opacity-0",
-          "translate-y-10",
-          "pointer-events-none",
-        );
-      }
-    }
-  });
-
-  if (backToTopBtn) {
-    backToTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  }
-
-  // Phone Animation Logic
-  const phoneCluster = document.getElementById("phone-cluster");
-  if (phoneCluster) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            phoneCluster.classList.remove("collapsed");
+        // Navbar Logic (Hide on Scroll Down, Show on Scroll Up)
+        if (navbar) {
+          if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            navbar.style.transform = "translateY(-100%)";
+          } else {
+            navbar.style.transform = "translateY(0)";
           }
+        }
+        lastScrollY = currentScrollY;
+
+        // Back to Top Button Logic
+        if (backToTopBtn) {
+          if (currentScrollY > 500) {
+            backToTopBtn.classList.remove(
+              "opacity-0",
+              "translate-y-10",
+              "pointer-events-none",
+            );
+          } else {
+            backToTopBtn.classList.add(
+              "opacity-0",
+              "translate-y-10",
+              "pointer-events-none",
+            );
+          }
+        }
+      });
+
+      if (backToTopBtn) {
+        backToTopBtn.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
         });
-      },
-      { threshold: 0.4 }, // Trigger when 40% visible
-    );
-    observer.observe(phoneCluster);
-  }
-</script>
+      }
 
-<style is:global>
-  /* Perspective for 3D Transforms */
-  .perspective-1000 {
-    perspective: 1000px;
-  }
-  .rotate-y-12 {
-    transform: rotateY(12deg);
-  }
-  .-rotate-y-12 {
-    transform: rotateY(-12deg);
-  }
-  .preserve-3d {
-    transform-style: preserve-3d;
-  }
+      // Phone Animation Logic
+      const phoneCluster = document.getElementById("phone-cluster");
+      if (phoneCluster) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                phoneCluster.classList.remove("collapsed");
+              }
+            });
+          },
+          { threshold: 0.4 }, // Trigger when 40% visible
+        );
+        observer.observe(phoneCluster);
+      }
+    </script>
 
-  /* Phone Animation Styles */
-  #phone-cluster.collapsed .phone-anim:nth-of-type(1) {
-    transform: translate(calc(-50% - 20px), -50%) scale(0.8) rotateY(0deg) !important;
-  }
-  #phone-cluster.collapsed .phone-anim:nth-of-type(2) {
-    transform: translate(calc(-50% + 20px), -50%) scale(0.8) rotateY(0deg) !important;
-  }
-  #phone-cluster.collapsed .phone-anim {
-    left: 50% !important;
-    top: 50% !important;
-    right: auto !important;
-  }
+    <style is:global>
+      /* Perspective for 3D Transforms */
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .rotate-y-12 {
+        transform: rotateY(12deg);
+      }
+      .-rotate-y-12 {
+        transform: rotateY(-12deg);
+      }
+      .preserve-3d {
+        transform-style: preserve-3d;
+      }
 
-  @media (min-width: 768px) {
-    .phone-anim:nth-of-type(1) {
-      transform: translate(calc(-50% - 220px), -50%) rotateY(12deg) scale(0.9) !important;
-    }
-    .phone-anim:nth-of-type(2) {
-      transform: translate(calc(-50% + 220px), -50%) rotateY(-12deg) scale(0.9) !important;
-    }
+      /* Phone Animation Styles */
+      #phone-cluster.collapsed .phone-anim:nth-of-type(1) {
+        transform: translate(calc(-50% - 20px), -50%) scale(0.8) rotateY(0deg) !important;
+      }
+      #phone-cluster.collapsed .phone-anim:nth-of-type(2) {
+        transform: translate(calc(-50% + 20px), -50%) scale(0.8) rotateY(0deg) !important;
+      }
+      #phone-cluster.collapsed .phone-anim {
+        left: 50% !important;
+        top: 50% !important;
+        right: auto !important;
+      }
 
-    #phone-cluster.collapsed .phone-anim {
-      transform: translate(-50%, -50%) scale(0.9) rotateY(0deg) !important;
-    }
-  }
-</style>
+      @media (min-width: 768px) {
+        .phone-anim:nth-of-type(1) {
+          transform: translate(calc(-50% - 220px), -50%) rotateY(12deg)
+            scale(0.9) !important;
+        }
+        .phone-anim:nth-of-type(2) {
+          transform: translate(calc(-50% + 220px), -50%) rotateY(-12deg)
+            scale(0.9) !important;
+        }
+
+        #phone-cluster.collapsed .phone-anim {
+          transform: translate(-50%, -50%) scale(0.9) rotateY(0deg) !important;
+        }
+      }
+    </style>
+  </footer>
+</html>
