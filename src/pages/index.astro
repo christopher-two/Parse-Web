@@ -13,7 +13,7 @@ import {
   Eye,
   Lock,
   Github,
-  Twitter,
+  Instagram,
 } from "lucide-astro";
 import "../styles/global.css";
 import SEO from "../components/SEO.astro";
@@ -417,7 +417,7 @@ const appSchema = {
       </p>
       <div class="mt-12 flex justify-center gap-4">
         <a
-          href="#"
+          href="https://play.google.com/store/apps/details?id=com.christopher.parse"
           class="px-8 py-4 bg-zinc-900 text-white font-bold rounded-full hover:bg-zinc-800 transition-colors"
         >
           Prueba la beta
@@ -451,75 +451,64 @@ const appSchema = {
           </p>
         </div>
 
-        <div>
-          <h4 class="font-bold text-zinc-900 mb-6 font-['Sixtyfour']">
-            Producto
-          </h4>
-          <ul class="space-y-4 text-sm text-zinc-500">
-            <li>
-              <a href="#" class="hover:text-purple-600 transition-colors"
-                >Descargar</a
-              >
-            </li>
-            <li>
-              <a href="#" class="hover:text-purple-600 transition-colors"
-                >Changelog</a
-              >
-            </li>
-            <li>
-              <a href="#" class="hover:text-purple-600 transition-colors"
-                >Roadmap</a
-              >
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="font-bold text-zinc-900 mb-6 font-['Sixtyfour']">
-            Comunidad
-          </h4>
-          <ul class="space-y-4 text-sm text-zinc-500">
-            <li>
-              <a href="#" class="hover:text-purple-600 transition-colors"
-                >GitHub</a
-              >
-            </li>
-            <li>
-              <a href="#" class="hover:text-purple-600 transition-colors"
-                >Discord</a
-              >
-            </li>
-            <li>
-              <a href="#" class="hover:text-purple-600 transition-colors"
-                >Twitter</a
-              >
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="font-bold text-zinc-900 mb-6 font-['Sixtyfour']">Legal</h4>
-          <ul class="space-y-4 text-sm text-zinc-500">
-            <li>
-              <a href="/privacy" class="hover:text-purple-600 transition-colors"
-                >Privacidad</a
-              >
-            </li>
-            <li>
-              <a href="/terms" class="hover:text-purple-600 transition-colors"
-                >Términos</a
-              >
-            </li>
-          </ul>
-        </div>
+        Producto
       </div>
+      <ul class="space-y-4 text-sm text-zinc-500">
+        <li>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.christopher.parse"
+            class="hover:text-purple-600 transition-colors">Descargar</a
+          >
+        </li>
+        <li>
+          <a href="/roadmap" class="hover:text-purple-600 transition-colors"
+            >Roadmap</a
+          >
+        </li>
+      </ul>
+    </div>
 
-      <div
-        class="flex flex-col md:flex-row justify-between items-center border-t border-zinc-200 pt-8 text-xs text-zinc-500"
-      >
-        <p>&copy; 2026. Desarrollado por Override y ChristopherTwo.</p>
-        <p class="mt-2 md:mt-0">Design inspired by modern Swiss Style.</p>
-      </div>
+    <div>
+      <h4 class="font-bold text-zinc-900 mb-6 font-['Sixtyfour']">Comunidad</h4>
+      <ul class="space-y-4 text-sm text-zinc-500">
+        <li>
+          <a
+            href="https://github.com/christopher-two"
+            target="_blank"
+            class="hover:text-purple-600 transition-colors">GitHub</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://instagram.com/overridellc"
+            target="_blank"
+            class="hover:text-purple-600 transition-colors">Instagram</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-bold text-zinc-900 mb-6 font-['Sixtyfour']">Legal</h4>
+      <ul class="space-y-4 text-sm text-zinc-500">
+        <li>
+          <a href="/privacy" class="hover:text-purple-600 transition-colors"
+            >Privacidad</a
+          >
+        </li>
+        <li>
+          <a href="/terms" class="hover:text-purple-600 transition-colors"
+            >Términos</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div
+      class="flex flex-col md:flex-row justify-between items-center border-t border-zinc-200 pt-8 text-xs text-zinc-500"
+    >
+      <p>&copy; 2026. Desarrollado por Override y ChristopherTwo.</p>
+      <p class="mt-2 md:mt-0">Design inspired by modern Swiss Style.</p>
     </div>
   </footer>
 
