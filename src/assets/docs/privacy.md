@@ -45,19 +45,19 @@ Utilizamos la información recopilada para los siguientes fines:
 1. **Autenticación:** Para verificar su identidad y permitir el acceso a la aplicación.
 2. **Funcionalidad Principal:** Para permitirle abrir, leer y gestionar sus libros locales.
 3. **Mejora de la App:** Utilizamos los datos de fallos (Crashlytics) para identificar y solucionar problemas técnicos.
-4. **Sincronización (Estado Local):** Actualmente, el progreso de lectura se almacena en una base de datos local (Room) dentro de su dispositivo.
+4. **Sincronización (Estado Local):** El progreso de lectura se almacena únicamente en una base de datos local (Room) dentro de su dispositivo.
 5. **Comunicaciones Legales:** Podemos utilizar su dirección de correo electrónico para enviarle notificaciones importantes sobre cambios en esta Política de Privacidad o en nuestros Términos y Condiciones.
 
 ## **3\. Permisos de Android**
 
-La aplicación puede solicitar los siguientes permisos sensibles para funcionar:
+La aplicación puede solicitar los siguientes permisos para funcionar:
 
-- **Almacenamiento (READ_EXTERNAL_STORAGE / MANAGE_EXTERNAL_STORAGE):** Necesario para que usted pueda seleccionar y leer los libros almacenados en su dispositivo. Sin este permiso, la función principal de "Lector de Libros" no puede ejecutarse.
-- **Acceso a Internet:** Necesario para la autenticación con Google y el reporte de errores anónimos.
+- **Acceso a Archivos:** Mediante el selector del sistema (Storage Access Framework) para permitirle leer PDFs locales.
+- **Acceso a Internet:** Necesario únicamente para la autenticación con Google y el reporte de errores anónimos.
 
 ## **4\. Servicios de Terceros**
 
-La aplicación utiliza servicios de terceros que pueden recopilar información utilizada para identificarle. Enlaces a las políticas de privacidad de los proveedores de servicios externos utilizados por la aplicación:
+La aplicación utiliza servicios de terceros que pueden recopilar información utilizada para identificarle:
 
 - [Google Play Services](https://policies.google.com/privacy)
 - [Firebase Auth](https://firebase.google.com/support/privacy)
@@ -66,25 +66,33 @@ La aplicación utiliza servicios de terceros que pueden recopilar información u
 
 ## **5\. Retención y Eliminación de Datos**
 
-- **Datos de Cuenta:** Conservamos los datos de su cuenta (email/ID) mientras mantenga su cuenta activa.
-- **Solicitud de Eliminación:** De acuerdo con las políticas de Google Play, usted tiene derecho a solicitar la eliminación de su cuenta y los datos asociados. Puede hacerlo contactándonos a través del correo electrónico proporcionado al final de este documento o mediante la opción correspondiente dentro de la configuración de la app (si está disponible).
-- **Archivos Locales:** Al desinstalar la aplicación, todos los datos generados localmente (preferencias, base de datos de progreso) se eliminan del dispositivo, salvo los archivos PDF originales que usted tenga guardados en su almacenamiento compartido.
+### **5.1. Derecho a la Eliminación**
+
+Usted tiene derecho a solicitar la eliminación de su cuenta y de todos los datos personales asociados en cualquier momento.
+
+### **5.2. Procedimiento de Eliminación**
+
+Puede solicitar la eliminación total de sus datos de dos maneras:
+
+1. **Dentro de la aplicación:** Accediendo a la sección de **Configuración \> Cuenta \> Eliminar cuenta**. Esta acción eliminará su perfil de autenticación de forma inmediata.
+2. **A través de la web (Soporte):** Si ya no tiene instalada la aplicación, puede visitar nuestro [Sitio de Soporte y Eliminación de Datos](https://www.google.com/search?q=https://parse.christopher.com.mx/support) o enviar un correo electrónico a **christopher.cop787@gmail.com** con el asunto "Eliminación de cuenta".
+
+### **5.3. Qué datos se eliminan**
+
+Al procesar una solicitud de eliminación, se borrará permanentemente de nuestros sistemas de autenticación:
+
+- Su dirección de correo electrónico.
+- Su identificador único de usuario (UID).
+- Metadatos del perfil de Google asociados a la app.  
+  _Nota: Los archivos PDF locales de su dispositivo no se verán afectados, ya que nosotros nunca tuvimos acceso a ellos fuera de su terminal._
 
 ## **6\. Seguridad**
 
-Valoramos su confianza al proporcionarnos su información personal, por lo que nos esforzamos por utilizar medios comercialmente aceptables para protegerla. Sin embargo, recuerde que ningún método de transmisión a través de Internet o método de almacenamiento electrónico es 100% seguro y confiable.
+Valoramos su confianza al proporcionarnos su información personal, por lo que nos esforzamos por utilizar medios comercialmente aceptables para protegerla. Los datos en tránsito se cifran mediante protocolos estándar de la industria.
 
-## **7\. Privacidad de los niños**
+## **7\. Contacto**
 
-Nuestros servicios no se dirigen a personas menores de 13 años. No recopilamos a sabiendas información de identificación personal de niños menores de 13 años.
-
-## **8\. Cambios a esta Política de Privacidad**
-
-Podemos actualizar nuestra Política de Privacidad de vez en cuando. Se le aconseja revisar esta página periódicamente para ver si hay cambios. Le notificaremos cualquier cambio publicando la nueva Política de Privacidad en esta página.
-
-## **9\. Contacto**
-
-Si tiene alguna pregunta o sugerencia sobre nuestra Política de Privacidad, no dude en contactarnos en:
+Si tiene alguna pregunta sobre la eliminación de sus datos o esta política, contáctenos en:
 
 - **Correo electrónico:** christopher.cop787@gmail.com
-- **Repositorio:** https://www.google.com/search?q=https://parse.christopher.com.mx
+- **Sitio Web:** https://www.google.com/search?q=https://parse.christopher.com.mx
