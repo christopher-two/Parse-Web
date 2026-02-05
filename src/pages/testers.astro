@@ -1,8 +1,162 @@
 ---
-import LegalLayout from "../layouts/LegalLayout.astro";
-import { Content as TestersContent } from "../assets/docs/testers.md";
+import {
+  ArrowLeft,
+  UserPlus,
+  Download,
+  MessageSquare,
+  ShieldCheck,
+  ChevronRight
+} from "lucide-astro";
+import "../styles/global.css";
+import SEO from "../components/SEO.astro";
+
+const steps = [
+  {
+    id: "01",
+    title: "Únete al Programa",
+    description: "Google Play requiere que aceptes convertirte en tester oficial para habilitar la descarga de la beta.",
+    link: "https://play.google.com/apps/testing/org.christophertwo.parse",
+    buttonText: "Convertirme en Tester",
+    icon: UserPlus,
+    color: "bg-purple-100 text-purple-600"
+  },
+  {
+    id: "02",
+    title: "Descarga la App",
+    description: "Una vez aceptado, la Play Store te permitirá instalar la versión Beta de Parse directamente en tu dispositivo.",
+    link: "https://play.google.com/store/apps/details?id=org.christophertwo.parse",
+    buttonText: "Instalar desde Play Store",
+    icon: Download,
+    color: "bg-blue-100 text-blue-600"
+  },
+  {
+    id: "03",
+    title: "Comparte tu Feedback",
+    description: "¿Encontraste un bug o tienes una idea? Tu opinión es lo que hace que Parse siga mejorando.",
+    link: "https://instagram.com/overridellc",
+    buttonText: "Enviar Sugerencia",
+    icon: MessageSquare,
+    color: "bg-zinc-100 text-zinc-900"
+  }
+];
 ---
 
-<LegalLayout title="Programa de Testers">
-  <TestersContent />
-</LegalLayout>
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <SEO
+      title="Programa de Testers - Parse"
+      description="Sigue estos pasos para convertirte en tester de Parse y probar las últimas funciones antes que nadie."
+    />
+  </head>
+  <body class="bg-white text-zinc-600 font-['Poppins',sans-serif] antialiased min-h-screen">
+    <!-- Background Grid -->
+    <div class="fixed inset-0 z-0 pointer-events-none">
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+    </div>
+
+    <!-- Nav -->
+    <nav class="fixed top-0 w-full z-50 border-b border-zinc-200 bg-white/70 backdrop-blur-xl">
+      <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-2 text-zinc-900 font-medium hover:text-purple-600 transition-colors">
+          <ArrowLeft size={18} />
+          <span>Volver</span>
+        </a>
+        <div class="flex items-center gap-2 text-zinc-900">
+            <img src="/Parse_Oprimized.svg" alt="Logo" class="w-6 h-6" />
+            <span class="font-['Sixtyfour'] text-xs mt-1">arse</span>
+        </div>
+      </div>
+    </nav>
+
+    <main class="relative z-10 pt-32 pb-24 px-6">
+      <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <header class="mb-20 text-center">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 border border-purple-100 text-purple-600 text-[10px] font-bold uppercase tracking-wider mb-6">
+            Beta Access
+          </div>
+          <h1 class="text-4xl md:text-6xl font-black text-zinc-900 mb-6 font-['Sixtyfour'] tracking-tighter">
+            Guía de <br class="md:hidden" /> <span class="text-purple-600">Testers</span>
+          </h1>
+          <p class="text-lg text-zinc-500 max-w-2xl mx-auto leading-relaxed">
+            Tu ayuda es fundamental para perfeccionar la experiencia de lectura. Sigue estos tres pasos para comenzar.
+          </p>
+        </header>
+
+        <!-- Steps Container -->
+        <div class="space-y-32">
+          {steps.map((step, index) => (
+            <div class="relative grid md:grid-cols-2 gap-12 items-center">
+              {/* Step number background */}
+              <div class="absolute -top-12 -left-4 md:-left-12 text-[100px] md:text-[120px] font-black text-zinc-100/50 leading-none select-none z-0 font-['Sixtyfour']">
+                {step.id}
+              </div>
+
+              <div class={`relative z-10 ${index % 2 !== 0 ? 'md:order-2' : ''}`}>
+                <div class={`w-14 h-14 ${step.color} rounded-2xl flex items-center justify-center mb-8 shadow-sm`}>
+                  <step.icon size={28} />
+                </div>
+                <h2 class="text-3xl font-bold text-zinc-900 mb-4 font-['Sixtyfour'] tracking-tight">
+                  {step.title}
+                </h2>
+                <p class="text-zinc-500 text-lg mb-8 leading-relaxed">
+                  {step.description}
+                </p>
+                <a 
+                  href={step.link} 
+                  target="_blank"
+                  class="inline-flex items-center gap-2 px-6 py-3 bg-zinc-900 text-white font-bold rounded-xl hover:bg-zinc-800 transition-all hover:gap-4 group"
+                >
+                  {step.buttonText}
+                  <ChevronRight size={18} class="text-zinc-400 group-hover:text-white transition-colors" />
+                </a>
+              </div>
+
+              {/* Image Placeholder */}
+              <div class={`relative aspect-video bg-zinc-50 rounded-3xl border border-zinc-100 overflow-hidden group shadow-inner ${index % 2 !== 0 ? 'md:order-1' : ''}`}>
+                <div class="absolute inset-0 flex items-center justify-center flex-col p-8 text-center">
+                  <div class="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center mb-4 text-zinc-200 group-hover:scale-110 transition-transform duration-500">
+                    <step.icon size={32} />
+                  </div>
+                  <p class="text-xs font-medium text-zinc-400 uppercase tracking-widest">Screenshot Placeholder</p>
+                  <p class="text-[10px] text-zinc-300 mt-2 italic">pasos/{step.id}.png</p>
+                </div>
+                {/* Simulated Shine Effect */}
+                <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Additional Info -->
+        <section class="mt-40 p-8 md:p-12 bg-zinc-900 rounded-[3rem] text-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-8 text-zinc-800/50">
+                <ShieldCheck size={120} strokeWidth={1} />
+            </div>
+            
+            <div class="relative z-10">
+                <h3 class="text-2xl font-bold mb-6 font-['Sixtyfour']">Cosas importantes</h3>
+                <div class="grid md:grid-cols-2 gap-8 text-zinc-400 text-sm">
+                    <div class="space-y-4">
+                        <p><strong class="text-white block mb-1">Versiones Beta</strong> Pueden contener errores menores. Te recomendamos tener respaldos de tus libros.</p>
+                        <p><strong class="text-white block mb-1">Actualizaciones</strong> Recibirás mejoras y parches con más frecuencia que la versión pública.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <p><strong class="text-white block mb-1">Privacidad</strong> Nuestra <a href="/privacy" class="text-purple-400 hover:underline">Política de Privacidad</a> se aplica igual: tus datos no salen de tu dispositivo.</p>
+                        <p><strong class="text-white block mb-1">Feedback</strong> No dudes en reportar cualquier detalle por pequeño que sea. ¡Todo suma!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="py-12 border-t border-zinc-100 bg-zinc-50/50">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <p class="text-xs text-zinc-400 font-medium tracking-widest uppercase mb-2">&copy; 2026 Parse App</p>
+            <p class="text-[10px] text-zinc-300 font-['Sixtyfour']">La privacidad es un derecho.</p>
+        </div>
+    </footer>
+  </body>
+</html>
